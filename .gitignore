@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Next.js
+.next/
+out/
+dist/
+
+# Build
+build/
+*.egg-info/
+*.egg
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Essential source materials (private)
+essentials/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+postgres_data/
+
