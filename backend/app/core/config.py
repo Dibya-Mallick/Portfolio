@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "replace_with_a_secure_random_value"
     EMAIL_PROVIDER_API_KEY: str = ""
     CONTACT_NOTIFICATION_EMAIL: str = ""
+    EMAIL_FROM_ADDRESS: str = "onboarding@resend.dev"
 
 
 settings = Settings()
