@@ -18,9 +18,13 @@ class EmailService:
         body: str,
     ) -> None:
         """Send a notification email."""
-        if not settings.EMAIL_PROVIDER_API_KEY or not settings.CONTACT_NOTIFICATION_EMAIL:
+        if (
+            not settings.EMAIL_PROVIDER_API_KEY
+            or not settings.CONTACT_NOTIFICATION_EMAIL
+        ):
             logger.info(
-                "Email sending skipped (provider key or recipient not configured). to=%s subject=%s",
+                "Email sending skipped (provider key or recipient not configured). "
+                "to=%s subject=%s",
                 to_email,
                 subject,
             )
@@ -47,4 +51,6 @@ class EmailService:
                 response.raise_for_status()
             logger.info("Email notification sent to=%s subject=%s", to_email, subject)
         except httpx.HTTPError:
-            logger.exception("Email notification failed to=%s subject=%s", to_email, subject)
+            logger.exception(
+                "Email notification failed to=%s subject=%s", to_email, subject
+            )

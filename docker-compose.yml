@@ -17,6 +17,9 @@ services:
       DATABASE_URL: postgresql+psycopg://portfolio_user:change_me@db:5432/portfolio
       FRONTEND_ORIGIN: http://localhost:3000
       SECRET_KEY: local-development-only-change-me
+      EMAIL_PROVIDER_API_KEY: ${EMAIL_PROVIDER_API_KEY:-}
+      CONTACT_NOTIFICATION_EMAIL: ${CONTACT_NOTIFICATION_EMAIL:-}
+      EMAIL_FROM_ADDRESS: ${EMAIL_FROM_ADDRESS:-onboarding@resend.dev}
     depends_on:
       db:
         condition: service_healthy
