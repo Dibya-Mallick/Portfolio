@@ -20,7 +20,8 @@ export function DataPixelArc({ background = "#1b1b1b", baseColor = "#f29c18", ac
     if (!canvas || !context) return;
     const base = hexToRgb(baseColor), accent = hexToRgb(accentColor), bright = hexToRgb(highlight);
     let frame = 0, width = 0, height = 0, dpr = 1;
-    let pointer = { x: 0.52, y: 0.48 }, target = { ...pointer };
+    const pointer = { x: 0.52, y: 0.48 };
+    let target = { ...pointer };
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
       dpr = Math.min(window.devicePixelRatio || 1, 2); width = rect.width; height = rect.height;
